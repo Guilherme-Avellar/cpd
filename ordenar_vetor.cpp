@@ -13,6 +13,9 @@ int main(){
     
     int i, v[N];
 
+    fstream arquivo;
+    arquivo.open("ordena_vetor.txt", ios::out);
+
     for(i = 0; i < N; i++){
         v[i] = rand()%101;
     }
@@ -44,8 +47,9 @@ void ordenacao_selecao(int *v, int tam){
     }
 
     if(arquivo.is_open()) {
-        for(int i = 0; i < tam; i++)
-            arquivo << v_temp[i] << " ";
+        for(int i = 0; i < tam - 1; i++){ // não sei pq é tam - 1, mas se for somente tam ele
+            arquivo << v_temp[i] << " "; //  pega um endereço onde é lixo de memória
+        }
         arquivo << "\n\n";
 
         arquivo.close();
