@@ -2,7 +2,7 @@
 
 void ordenacao_selecao(int *v, int tam);
 
-#define N 100
+#define N 10000
 
 using namespace std;
 
@@ -20,8 +20,8 @@ int main(){
         v[i] = rand()%101;
     }
 
-    for(i = 0; i < 5; i++){
-        ordenacao_selecao(v, i + 10);
+    for(i = 1; i <= 2; i++){
+        ordenacao_selecao(v, i * 100);
     }
 
     
@@ -47,7 +47,7 @@ void ordenacao_selecao(int *v, int tam){
     }
 
     if(arquivo.is_open()) {
-        for(int i = 0; i < tam - 1; i++){ // não sei pq é tam - 1, mas se for somente tam ele
+        for(int i = 0; i < tam; i++){ // não sei pq é tam - 1, mas se for somente tam ele
             arquivo << v_temp[i] << " "; //  pega um endereço onde é lixo de memória
         }
         arquivo << "\n\n";
