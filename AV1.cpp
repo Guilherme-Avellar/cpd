@@ -1,5 +1,11 @@
 #include <bits/stdc++.h>
 
+#define VERMELHO "\x1b[31m"
+#define GREEN "\x1b[32m"
+#define RESET "\x1b[m"
+
+//#define PRINT
+
 
 using namespace std;
 
@@ -15,20 +21,37 @@ void troca(int *a, int *b);
 
 
 
-int main(int argc, char *args[]){
+int main(int argc, char *args[]) {
 
     srand(time(NULL));
+    //tolower(args[1]);
 
-    int v[N];
+    if(args[1] == "VERMELHO") {
+        cout << VERMELHO << "" << endl;
+        cout << "\n\n\naaaaaaa" << endl;
+    }else {
+        cout << GREEN;
+        cout << "\n\n" << args[1];
+    }
+
+    int v[N], soma = 0;
 
     preencher(v, N, 0, N);
-    cout << "\ndesordenado: ";
+    cout <<"\ndesordenado: ";
     exibir(v, 0, N);
     quicksort(v, 0, N-1);
     cout << "\nordenado: ";
     exibir(v, 0, N);
-    cout << "\nesta ordenado?: " << ordenado(v, N) << endl;
-
+    if(ordenado(v, N)){
+        cout << "\n\nEstá ordenado\n" << endl;
+    } else{
+        cout << "\n\nNão está ordenado\n" << endl;
+    }
+    /*for(int i = 1; i < argc; i++){
+        cout << args[i] << " ";
+        soma += atoi(args[i]);
+    }
+    cout << "\nsoma: " << soma << endl;*/
 
 
     return 0; 
