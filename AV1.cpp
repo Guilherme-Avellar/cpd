@@ -24,9 +24,10 @@ void troca(int *a, int *b);
 int main(int argc, char *args[]) {
 
     srand(time(NULL));
+    string r = "VERMELHO";
     //tolower(args[1]);
 
-    if(args[1] == "VERMELHO") {
+    if(args[1] == r) {
         cout << VERMELHO << "" << endl;
         cout << "\n\n\naaaaaaa" << endl;
     }else {
