@@ -22,7 +22,7 @@ int main() {
 
     cout << "\nAlteracao feita pelo github\nisso funciona?\n";
     cout << "\nEssa linha foi alterada no local, não no site do git\n";
-    cout << "\nEsse commit foi pelo terminal\n";
+    cout << "\nEsse commit foi pelo terminal...\n";
 
     return 0;
 }
